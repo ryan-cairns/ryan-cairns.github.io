@@ -1,0 +1,62 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Naming Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        #game-container {
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        #timer, #high-score {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            font-size: 18px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        #submit, #play-again {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #play-again {
+            display: none;
+        }
+        #results {
+            margin-top: 20px;
+        }
+        .correct-country {
+            color: green;
+        }
+        .incorrect-country {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <h1>Country Counter</h1>
+        <div id="high-score">High Score: 0</div>
+        <div id="timer">Time left: 120 seconds</div>
+        <input type="text" id="country-input" placeholder="Enter a country name..." />
+        <button id="submit">Submit</button>
+        <button id="play-again">Play Again</button>
+        <div id="results"></div>
+    </div>
+    <script src="js/ccgame.js"></script>
+</body>
