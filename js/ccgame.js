@@ -256,13 +256,24 @@ function updateResults() {
   resultsElement.innerHTML = ""; // Clear current results
   guessedCountries.sort(); // Sort the guessed countries alphabetically
 
-  guessedCountries.forEach((country) => {
-    const correctCountryElement = document.createElement("div");
-    const originalCountryName = countries[lowerCaseCountries.indexOf(country)];
-    correctCountryElement.textContent = originalCountryName;
-    correctCountryElement.className = "correct-country";
-    resultsElement.appendChild(correctCountryElement);
-  });
+  for (let i = 0; i < guessedCountries.length; i += 3) {
+    const rowElement = document.createElement("div");
+
+    for (let j = i; j < i + 3 && j < guessedCountries.length; j++) {
+      const correctCountryElement = document.createElement("span");
+      const originalCountryName =
+        countries[lowerCaseCountries.indexOf(guessedCountries[j])];
+      correctCountryElement.textContent = originalCountryName;
+      correctCountryElement.className = "correct-country";
+      rowElement.appendChild(correctCountryElement);
+
+      if (j < i + 2 && j < guessedCountries.length - 1) {
+        rowElement.appendChild(document.createTextNode(", "));
+      }
+    }
+
+    resultsElement.appendChild(rowElement);
+  }
 }
 
 // Function to end the game
@@ -290,13 +301,24 @@ function displayMissedCountries() {
   );
   missedCountries.sort(); // Sort the missed countries alphabetically
 
-  missedCountries.forEach((country) => {
-    const missedCountryElement = document.createElement("div");
-    const originalCountryName = countries[lowerCaseCountries.indexOf(country)];
-    missedCountryElement.textContent = `Missed: ${originalCountryName}`;
-    missedCountryElement.className = "incorrect-country";
-    resultsElement.appendChild(missedCountryElement);
-  });
+  for (let i = 0; i < missedCountries.length; i += 3) {
+    const rowElement = document.createElement("div");
+
+    for (let j = i; j < i + 3 && j < missedCountries.length; j++) {
+      const missedCountryElement = document.createElement("span");
+      const originalCountryName =
+        countries[lowerCaseCountries.indexOf(missedCountries[j])];
+      missedCountryElement.textContent = originalCountryName;
+      missedCountryElement.className = "incorrect-country";
+      rowElement.appendChild(missedCountryElement);
+
+      if (j < i + 2 && j < missedCountries.length - 1) {
+        rowElement.appendChild(document.createTextNode(", "));
+      }
+    }
+
+    resultsElement.appendChild(rowElement);
+  }
 }
 
 // Function to reset the game
