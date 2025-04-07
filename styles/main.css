@@ -87,11 +87,14 @@ section:nth-child(4) {
 
 /* Skills */
 .skills-list {
+  list-style: none; /* 🚫 Removes bullets */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 1rem;
   padding-top: 1rem;
+  padding-left: 0; /* Removes default left padding */
 }
+
 .skills-list li {
   background-color: #2a2a2a;
   padding: 0.8rem;
