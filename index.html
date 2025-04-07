@@ -1,75 +1,124 @@
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ryan Cairns' Software Developer Portfolio</title>
-  <link rel="stylesheet" href="styles/main.css" />
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="styles/core.css" />
-</head>
-<body>
-  <header>
-    <h1>Ryan Cairns' Portfolio</h1>
-  </header>
-  <div class="navbar">
-    <ul>
-      <li>
-        <a href="#profile">Profile</a>
-      </li>
-      <li>
-        <a href="#skills">Skills</a>
-      </li>
-      <li>
-        <a href="#projects">Projects</a>
-      </li>
-      <li>
-        <a href="#contact">Contact</a>
-      </li>
-      <li>
-        <a href="https://github.com/ryan-cairns"><i class="fa-brands fa-github"></i> GitHub</a>
-      </li>
-    </ul>
-  </div>
-  <div class="container">
-    <section class="profile">
-      <h2>Profile</h2>
-      <p>
-        Hi! I'm Ryan Cairns, a Software Engineering graduate. With a passion
-        for technology and a keen eye for detail, I create efficient and
-        innovative solutions to complex problems.
-      </p>
-    </section>
-    <section class="projects">
-      <h2>Projects</h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ryan Cairns' Software Developer Portfolio</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Ryan Cairns</h1>
+      <p>Software Engineer | Backend Developer</p>
+    </header>
+
+    <nav class="navbar">
       <ul>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
         <li>
-          <strong>Project 1:</strong> Horse racing data visualization tool
-          using Python
-        </li>
-        <li>
-          <strong>Project 2:</strong>E-commerce mobile app using Java
-        </li>
-        <li>
-          <strong>Project 3:</strong>E-commerce website built using Django
+          <a href="https://github.com/ryan-cairns" target="_blank"
+            ><i class="fa-brands fa-github"></i> GitHub</a
+          >
         </li>
       </ul>
-    </section>
-    <section class="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Java</li>
-        <li>Python</li>
-        <li>C++</li>
-        <li>Django</li>
-        <li>SQL</li>
-        <li>Git</li>
-      </ul>
-    </section>
-    <section class="contact">
-      <h2>Contact</h2>
-    </section>
-  </div>
-</body>
+    </nav>
+
+    <main class="container">
+      <section id="profile" class="profile">
+        <h2>Profile</h2>
+        <p>
+          Hi! I'm Ryan Cairns, a Software Engineering graduate with a passion
+          for backend development. I enjoy building robust, scalable
+          applications and love solving complex problems with clean, efficient
+          code.
+        </p>
+      </section>
+
+      <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>Java</li>
+          <li>Python</li>
+          <li>C++</li>
+          <li>Django</li>
+          <li>SQL</li>
+          <li>Git</li>
+          <li>Kotlin</li>
+          <li>REST APIs</li>
+        </ul>
+      </section>
+
+      <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+          <h3>🏇 Horse Racing Data Visualizer</h3>
+          <p>
+            An Android app built with Kotlin that visualizes horse racing
+            statistics using interactive charts and live data from racing APIs.
+          </p>
+          <p>
+            <strong>Stack:</strong> Kotlin, Android SDK, Retrofit,
+            MPAndroidChart
+          </p>
+          <a
+            href="https://github.com/ryan-cairns/horse-racing-visualizer"
+            target="_blank"
+            >🔗 GitHub</a
+          >
+        </div>
+
+        <div class="project-card">
+          <h3>🌍 Country Naming Game</h3>
+          <p>
+            A fun, fast-paced web game where players try to name as many
+            countries as possible within 3 minutes.
+          </p>
+          <p><strong>Stack:</strong> HTML, CSS, JavaScript</p>
+          <a
+            href="https://github.com/ryan-cairns/country-naming-game"
+            target="_blank"
+            >🔗 GitHub</a
+          >
+        </div>
+
+        <div class="project-card">
+          <h3>🛒 E-Commerce App</h3>
+          <p>
+            Mobile shopping app developed in Java with cart, payment simulation,
+            and product management features.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>🛍️ E-Commerce Website</h3>
+          <p>
+            Online store with user auth, product listings, and checkout built
+            using Django and PostgreSQL.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>
+          Email:
+          <a href="mailto:ryan.cairns@example.com">ryan.cairns@example.com</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Ryan Cairns. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
