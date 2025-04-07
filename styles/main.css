@@ -127,7 +127,21 @@ section:nth-child(4) {
 }
 
 /* Skills */
+/* Keyframes for sliding up + fade */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animate each skill */
 .skills-list li {
+  list-style: none;
   background-color: #2a2a2a;
   padding: 0.8rem;
   text-align: center;
@@ -135,7 +149,32 @@ section:nth-child(4) {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeSlideUp 0.5s ease-out forwards;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Staggered delay using nth-child */
+.skills-list li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.skills-list li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.skills-list li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.skills-list li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.skills-list li:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.skills-list li:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.skills-list li:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.skills-list li:nth-child(8) {
+  animation-delay: 0.8s;
 }
 
 /* Hover effect */
