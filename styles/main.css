@@ -275,3 +275,56 @@ footer {
   color: #666;
   border-top: 1px solid #333;
 }
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  background-color: #4fc3f7;
+  color: #121212;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+#backToTop:hover {
+  transform: scale(1.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+#themeToggle:hover {
+  color: #4fc3f7;
+}
+
+/* Light Theme */
+body.light-theme {
+  background-color: #f0f0f0;
+  color: #1a1a1a;
+}
+body.light-theme .navbar {
+  background-color: #fff;
+}
+body.light-theme .project-card,
+body.light-theme .skills-list li {
+  background-color: #eaeaea;
+}
+body.light-theme a {
+  color: #0077cc;
+}

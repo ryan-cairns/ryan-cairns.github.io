@@ -38,6 +38,11 @@
             ><i class="fa-brands fa-github"></i> GitHub</a
           >
         </li>
+        <li>
+          <button id="themeToggle" title="Toggle Theme">
+            <i class="fa fa-moon"></i>
+          </button>
+        </li>
       </ul>
     </nav>
 
@@ -125,6 +130,8 @@
       </section>
     </main>
 
+    <button id="backToTop" title="Go to top">↑</button>
+
     <footer>
       <p>© 2025 Ryan Cairns. All rights reserved.</p>
     </footer>
@@ -148,6 +155,26 @@
             link.classList.add("active");
           }
         });
+      });
+    </script>
+    <script>
+      const topButton = document.getElementById("backToTop");
+      window.addEventListener("scroll", () => {
+        topButton.style.display = window.scrollY > 200 ? "block" : "none";
+      });
+      topButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+    <script>
+      const toggleBtn = document.getElementById("themeToggle");
+      const body = document.body;
+
+      toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("light-theme");
+        const icon = toggleBtn.querySelector("i");
+        icon.classList.toggle("fa-moon");
+        icon.classList.toggle("fa-sun");
       });
     </script>
   </body>
