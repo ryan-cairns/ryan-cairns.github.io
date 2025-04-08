@@ -157,13 +157,25 @@ section:nth-child(4) {
 
 /* Animate each skill */
 .skills-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
   background-color: #2a2a2a;
   padding: 0.8rem;
-  text-align: center;
   border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeSlideUp 0.5s ease-out forwards;
+}
+
+.skills-list li img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: brightness(1.2);
 }
 
 /* Staggered delay using nth-child */
