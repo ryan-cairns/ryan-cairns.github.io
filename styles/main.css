@@ -102,6 +102,13 @@ header p {
   width: 100%;
 }
 
+.navbar a.active {
+  color: #4fc3f7;
+}
+.navbar a.active::after {
+  width: 100%;
+}
+
 /* Sections */
 section {
   margin: 2.5rem 0;
